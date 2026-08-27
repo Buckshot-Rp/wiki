@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="bezel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3d2f35"/>
+      <stop offset="100%" stop-color="#1a1218"/>
+    </linearGradient>
+    <linearGradient id="screenGlow" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#2a1810"/>
+      <stop offset="100%" stop-color="#120c08"/>
+    </linearGradient>
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="rgba(0,0,0,0.35)"/>
+    </pattern>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- CRT bezel -->
+  <rect x="8" y="12" width="104" height="88" rx="10" fill="url(#bezel)" stroke="#5c3d48" stroke-width="2"/>
+  <rect x="14" y="18" width="92" height="68" rx="4" fill="#0d0908" stroke="#2a1818" stroke-width="1"/>
+
+  <!-- Screen -->
+  <rect x="18" y="22" width="84" height="60" rx="2" fill="url(#screenGlow)"/>
+  <rect x="18" y="22" width="84" height="60" rx="2" fill="url(#scanlines)" opacity="0.6"/>
+
+  <!-- Wire-frame nerd glasses (phosphor amber) -->
+  <g filter="url(#glow)" stroke="#e8a030" stroke-width="2.2" fill="none" stroke-linecap="round">
+    <circle cx="44" cy="50" r="11"/>
+    <circle cx="76" cy="50" r="11"/>
+    <path d="M55 50h10"/>
+    <path d="M33 48c-4-6-2-12 4-12"/>
+    <path d="M87 48c4-6 2-12-4-12"/>
+  </g>
+
+  <!-- Terminal prompt chevron -->
+  <path d="M28 68l6 4-6 4" fill="#c97820" opacity="0.85"/>
+
+  <!-- Power LED -->
+  <circle cx="96" cy="96" r="3" fill="#8b2030"/>
+  <circle cx="96" cy="96" r="5" fill="#8b2030" opacity="0.25"/>
+
+  <!-- Stand -->
+  <path d="M46 100h28v4H46z" fill="#2a1818"/>
+  <path d="M38 104h44v3H38z" fill="#3d2f35"/>
+</svg>

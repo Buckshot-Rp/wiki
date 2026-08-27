@@ -1,0 +1,30 @@
+{
+  "name": "buckshot-wiki",
+  "version": "1.0.0",
+  "description": "Buckshot RP wiki",
+  "packageManager": "bun@1.3.14",
+  "scripts": {
+    "dev": "next",
+    "dev:clean": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\" && next",
+    "build": "next build",
+    "start": "next start",
+    "postbuild": "next-sitemap"
+  },
+  "dependencies": {
+    "@tabler/icons-react": "^3.46.0",
+    "next": "^14.2.35",
+    "nextra": "^3.2.0",
+    "nextra-theme-docs": "^3.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "autoprefixer": "^10.4.0",
+    "next-sitemap": "^4.2.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.0.0"
+  }
+}
